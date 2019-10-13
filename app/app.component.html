@@ -1,0 +1,256 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- Toolbar -->
+<div style="margin-bottom: 25px;" class="toolbar" role="banner">
+  
+  <span>Host Logo</span>
+    <div class="spacer"></div>
+  <a aria-label="Angular on twitter" target="_blank" rel="noopener" href="https://twitter.com/angular" title="Twitter">
+    
+   
+    
+  </a>
+</div>
+
+<div style="text-align: center;" class="container-fluid">
+  <div class="container">
+    
+        
+      
+
+  <!-- Resources -->
+  
+
+  <!-- Next Steps -->
+  <h2>Next Steps</h2>
+  
+
+  <input type="hidden" #selection>
+
+  <div  class="card-container">
+    <div class="card card-small" (click)="infoScreenSwitch()" tabindex="0">
+        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+
+      <span>Customer Info</span>
+    </div>
+
+    <div class="card card-small" (click)="orderScreenSwitch()" tabindex="0">
+        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+
+      <span>Order Info</span>
+    </div>
+
+    <div class="card card-small" (click)="paymentScreenSwitch()" tabindex="0">
+      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+
+      <span>Payment Info</span>
+    </div>
+
+    
+  </div>
+
+
+
+ 
+ <!--Customer info screen-->
+
+
+<div id="infoScreen" *ngIf="infoScreen">
+
+
+
+<div style="margin-bottom: 25px;" class="row">
+  <div class="col">
+    <div class="input-group input-group-lg">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-lg">Phone Number</span>
+      </div>
+        <input type="text" id="PhoneInput" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+      </div>
+    </div>
+  </div>
+  <div style="margin-bottom: 25px;" class="row">
+      <div class="col">
+        <div class="input-group input-group-lg">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-lg">Name</span>
+          </div>
+            <input type="text" id="nameInput" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+          </div>
+        </div>
+      </div>
+      <div style="margin-bottom: 25px;" class="row">
+          <div class="col">
+            <div class="input-group input-group-lg">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg">Address</span>
+              </div>
+                <input type="text" id="addressInput" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">Room Number</span>
+                  </div>
+                    <input type="text" id="roomInput" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+              </div>
+              
+            </div>
+          </div>
+          <div style="margin-bottom: 25px;" class="row">
+              <div class="col">
+                <div class="input-group input-group-lg">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing">Extra Comments</span>
+                  </div>
+                    <input type="text" id="commentsInput" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                  </div>
+                  
+                </div>
+              </div>
+
+
+              <button (click)="infoScreenSubmit()" type="button" class="btn btn-primary">Submit</button>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!--Order info screen-->
+
+  <div id="orderScreen" *ngIf="orderScreen">
+
+    <div style="margin-bottom: 25px;" class="row">
+      
+      <div class="col">
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <app-order-buttons1 (click)="orderScreenPizzaSwitch()">Pizza</app-order-buttons1>
+            <app-order-buttons1>Salad</app-order-buttons1>
+            <app-order-buttons1>Calzone</app-order-buttons1>
+            <app-order-buttons1>Sides</app-order-buttons1>
+            <app-order-buttons1>Gulten Free/Vegan</app-order-buttons1>
+            <app-order-buttons1>Kids</app-order-buttons1>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="orderScreenPizzza" style="margin-bottom: 25px;" class="row">
+        <div class="col">
+        <app-order-buttons2></app-order-buttons2>
+      </div>
+    </div>
+    <div *ngIf="orderScreenPizzza" style="margin-bottom: 25px;" class="row">
+      <div class="col">
+        <div  class="btn-group" role="group" aria-label="Basic example">
+          <app-order-buttons3>Left</app-order-buttons3>
+          <app-order-buttons3>Whole</app-order-buttons3>
+          <app-order-buttons3>Right</app-order-buttons3>
+          <app-order-buttons3>More...</app-order-buttons3>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="orderScreenPizzza" style="margin-bottom: 25px;" class="row">
+      <div class="col">
+          <app-order-buttons4  (click)="meatSpecialsShow()">Meat Specials</app-order-buttons4>
+          <app-order-buttons4 *ngIf="meatSpecials">Bob Marley</app-order-buttons4>
+          <app-order-buttons4 *ngIf="meatSpecials">Dream Special</app-order-buttons4>
+          <app-order-buttons4 *ngIf="meatSpecials" >Marilyn Monroe</app-order-buttons4>
+          <app-order-buttons4 *ngIf="meatSpecials">The Bent</app-order-buttons4>
+          <app-order-buttons4 *ngIf="meatSpecials">Mary’s Peak</app-order-buttons4>
+          <app-order-buttons4 *ngIf="meatSpecials">Tejano</app-order-buttons4>
+          <app-order-buttons4 *ngIf="meatSpecials">Corvegas</app-order-buttons4>
+          <app-order-buttons4 *ngIf="meatSpecials">Hoodoo You Love</app-order-buttons4>
+          <app-order-buttons4 *ngIf="meatSpecials">Dimple Hill</app-order-buttons4>
+          <app-order-buttons4 *ngIf="meatSpecials">Zorba</app-order-buttons4>
+          <app-order-buttons4 *ngIf="meatSpecials">Rat Pack Special</app-order-buttons4>
+          <app-order-buttons4 *ngIf="meatSpecials">Dog Running</app-order-buttons4>
+          <app-order-buttons4 *ngIf="meatSpecials">Omaha or Bust</app-order-buttons4>
+          <app-order-buttons4 *ngIf="meatSpecials">Raider v. Spartan</app-order-buttons4>
+      </div>
+      <div class="col">
+          <app-order-buttons5 (click)="veggieSpecialsShow()">Veggie Specials</app-order-buttons5>
+          <app-order-buttons5 *ngIf="veggieSpecials">Rocket Science</app-order-buttons5>
+          <app-order-buttons5 *ngIf="veggieSpecials">Herbivore</app-order-buttons5>
+          <app-order-buttons5 *ngIf="veggieSpecials">Vegan Love</app-order-buttons5>
+          <app-order-buttons5 *ngIf="veggieSpecials">Edward Abbey</app-order-buttons5>
+          <app-order-buttons5 *ngIf="veggieSpecials">Margharita (Obama’s Choice)</app-order-buttons5>
+          <app-order-buttons5 *ngIf="veggieSpecials">Caro Amico</app-order-buttons5>
+          <app-order-buttons5 *ngIf="veggieSpecials">Bike “E”</app-order-buttons5>
+          <app-order-buttons5 *ngIf="veggieSpecials">Eclipse</app-order-buttons5>
+          <app-order-buttons5 *ngIf="veggieSpecials">Bill Walton</app-order-buttons5>
+          <app-order-buttons5 *ngIf="veggieSpecials">Benny’s Delight</app-order-buttons5>
+      </div>
+    </div>
+    <div *ngIf="orderScreenPizzza" class="row">
+        <h1>Toppings</h1>
+    </div>
+    <div *ngIf="orderScreenPizzza" class="row">
+      
+        
+          <app-order-buttons6>Extra Mozzarella</app-order-buttons6>
+          <app-order-buttons6>Feta</app-order-buttons6>
+          <app-order-buttons6>Asiago</app-order-buttons6>
+         
+
+         
+          <app-order-buttons6>Pepperoni </app-order-buttons6>
+          <app-order-buttons6> American Bacon</app-order-buttons6>
+          <app-order-buttons6>Italian Sausage</app-order-buttons6>
+  
+ 
+          <app-order-buttons6>Mushrooms</app-order-buttons6>
+          <app-order-buttons6>Black Olive</app-order-buttons6>
+          <app-order-buttons6>Fresh Tomato</app-order-buttons6>
+
+
+    </div>
+    <button *ngIf="orderScreenPizzza" type="button" class="btn btn-primary">Add to order.</button>
+  </div>
+
+
+<!--Payment info screen-->
+
+
+  <div id="paymentScreen" *ngIf="paymentScreen">
+    <div class="card">
+        <h1>Payment</h1>
+    </div>
+  </div>
+  
+
+
+  
+
+
+  
+  
+  </div>
+</div>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+
+<router-outlet></router-outlet>
